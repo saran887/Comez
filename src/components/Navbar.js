@@ -34,18 +34,18 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm md:bg-transparent">
       <div className="w-full mx-auto">
-        <div className="flex items-center justify-between px-4 py-4 w-full">
-          <div className="text-5xl font-bold text-white px-10">Comez</div>
+        <div className="flex items-center justify-between px-4 py-3 w-full">
+          <div className="text-3xl font-bold text-white px-4 md:px-10">Comez</div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex flex-1 justify-center">
-            <div className="bg-[rgba(1,34,50,0.7)] px-20 py-10 md:px-40 md:py-6 rounded-full shadow-[0px_4px_15px_rgba(0,0,0,0.3)]">
-              <div className="flex items-center space-x-6 md:space-x-12 lg:space-x-24">
+            <div className="bg-[rgba(1,34,50,0.7)] px-12 py-6 md:px-40 md:py-6 rounded-full shadow-[0px_4px_15px_rgba(0,0,0,0.3)]">
+              <div className="flex items-center space-x-4 md:space-x-12 lg:space-x-24">
                 {navLinks.map((link, index) => (
                   <button
                     key={index}
                     onClick={() => link.section ? scrollToSection(link.section) : link.action()}
-                    className="px-3 py-1.5 text-base md:text-lg font-medium text-white hover:bg-white/10 rounded-full whitespace-nowrap transition-colors duration-200"
+                    className="px-2 py-1 text-sm md:text-lg font-medium text-white hover:bg-white/10 rounded-full whitespace-nowrap transition-colors duration-200"
                   >
                     {link.name}
                   </button>
@@ -73,33 +73,32 @@ const Navbar = () => {
         
         {/* Mobile Menu */}
         <div 
-          className={`md:hidden fixed inset-0 bg-black/80 transition-all duration-300 ease-in-out transform ${
+          className={`md:hidden fixed inset-0 bg-black/95 transition-transform duration-300 ease-in-out transform ${
             isOpen ? 'translate-y-0' : '-translate-y-full'
           }`}
           style={{
-            paddingTop: '5rem', // Space for the header
+            paddingTop: '2rem', // Increased padding for better spacing
             height: '100vh',
             width: '100vw',
-            overflowX: 'hidden',
-            boxSizing: 'border-box'
+            overflow: 'auto',
+            boxSizing: 'border-box',
+            WebkitOverflowScrolling: 'touch' // Better scrolling on iOS
           }}
         >
-          <div className="flex flex-col items-center justify-start h-full w-full overflow-y-auto py-8">
-            <div className="w-full max-w-xs space-y-4 px-4 bg-black/80 backdrop-blur-md rounded-2xl py-8 mx-auto">
-              {navLinks.map((link, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    if (link.section) scrollToSection(link.section);
-                    else link.action();
-                    setIsOpen(false);
-                  }}
-                  className="w-full px-6 py-4 text-xl font-medium text-white hover:bg-white/10 rounded-xl transition-colors duration-200 text-center"
-                >
-                  {link.name}
-                </button>
-              ))}
-            </div>
+          <div className="flex flex-col items-center justify-start h-full w-full overflow-y-auto py-6 px-6 space-y-4">
+            {navLinks.map((link, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  if (link.section) scrollToSection(link.section);
+                  else link.action();
+                  setIsOpen(false);
+                }}
+                className="w-full px-4 py-3 text-lg font-medium text-white hover:bg-white/10 rounded-xl transition-colors duration-200 text-center"
+              >
+                {link.name}
+              </button>
+            ))}
           </div>
         </div>
       </div>

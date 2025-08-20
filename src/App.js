@@ -10,23 +10,29 @@ import Features from './components/Features';
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-[#020C14] pt-24">
-      <Navbar />
-      <Hero />
-      <Download />
-      <div id="about">
-        <About />
-        <div id="features">
-          <Features />
+    <div className="relative min-h-screen w-full bg-[#020C14] overflow-hidden">
+      <div className="w-full max-w-[100vw] overflow-x-hidden">
+        <div className="pt-24 w-full">
+           <Navbar /> 
+          <div className="w-full overflow-x-hidden">
+            <Hero />
+            <Download />
+            <div id="about" className="w-full overflow-hidden">
+              <About />
+              <div id="features">
+                <Features />
+              </div>
+            </div>
+            <div id="pricing" className="w-full overflow-hidden">
+              <Pricing />
+            </div>
+            <div id="faqs" className="w-full overflow-hidden">
+              <FAQs />
+            </div>
+            <NewFooter />
+          </div>
         </div>
       </div>
-      <div id="pricing">
-        <Pricing />
-      </div>
-      <div id="faqs">
-        <FAQs />
-      </div>
-      <NewFooter />
     </div>
   );
 }

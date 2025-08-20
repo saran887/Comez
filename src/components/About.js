@@ -57,14 +57,14 @@ const About = () => {
         <div className="mt-12 lg:mt-20 flex flex-col lg:flex-row items-center justify-between lg:gap-12 max-w-6xl mx-auto">
           {/* Mobile Images - Left Side */}
           <div className="w-full lg:w-1/2 relative h-auto lg:h-[600px] mb-12 lg:mb-0">
-            <div className="relative w-full max-w-[350px] mx-auto lg:mx-0 lg:absolute lg:left-10 lg:top-15 down-10 z-10 lg:w-3/4">
+            <div className="hidden lg:block relative w-full max-w-[350px] mx-auto lg:mx-0 lg:absolute lg:left-10 lg:top-15 down-10 z-10 lg:w-3/4">
               <img 
                 src={Mobile2} 
                 alt="Mobile App Screenshot 1" 
                 className="w-full rounded-3xl shadow-xl"
               />
             </div>
-            <div className="relative w-full max-w-[350px] mx-auto lg:mx-0 mt-8 lg:absolute   lg:right-0 lg:bottom-0 lg:w-3/4">
+            <div className="relative w-full max-w-[350px] mx-auto lg:mx-0 lg:absolute lg:right-0 lg:bottom-0 lg:w-3/4">
               <img 
                 src={Mobile1} 
                 alt="Mobile App Screenshot 2" 

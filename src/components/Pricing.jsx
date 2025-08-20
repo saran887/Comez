@@ -8,7 +8,7 @@ const Pricing = () => {
     {
       title: 'Android & IOS',
       monthlyPrice: '₹ 1000',
-      yearlyPrice: '₹ 1,00,000',
+      yearlyPrice: '₹ 10,000',
       description: 'Per month',
       features: [
         'Customize Theme',
@@ -23,7 +23,7 @@ const Pricing = () => {
     {
       title: 'Android,IOS & Web',
       monthlyPrice: '₹ 2000',
-      yearlyPrice: '₹ 2,00,000',
+      yearlyPrice: '₹ 20,000',
       description: 'Per month',
       features: [
         'Customize Theme',
@@ -57,20 +57,28 @@ const Pricing = () => {
         <div className="text-center mb-16">
           <h2 className="mt-2 text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">Pricing</h2>
           
-          <div className="mt-10 flex items-center justify-center">
-            <span className={`mr-4 text-lg font-medium ${!isYearly ? 'text-blue-400' : 'text-gray-400'}`}>Monthly</span>
-            <button 
-              onClick={() => setIsYearly(!isYearly)}
-              className="relative inline-flex h-8 w-16 items-center rounded-full bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
-            >
-              <span 
-                className={`${
-                  isYearly ? 'translate-x-9' : 'translate-x-1'
-                } inline-block h-6 w-6 transform rounded-full bg-white transition-transform`}
-              />
-            </button>
-            <span className={`mr-4 text-lg font-medium ${!isYearly ? 'text-blue-400' : 'text-gray-400'}`}>  Annual</span>
-            
+          <div className="mt-10 flex flex-col items-center justify-center space-y-2">
+            <div className="flex items-center space-x-4">
+              <span className={`text-lg font-medium ${!isYearly ? 'text-blue-400' : 'text-gray-400'} w-20 text-right`}>
+                {!isYearly ? 'Monthly' : ''}
+              </span>
+              <button 
+                onClick={() => setIsYearly(!isYearly)}
+                className="relative inline-flex h-8 w-16 items-center rounded-full bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+              >
+                <span 
+                  className={`${
+                    isYearly ? 'translate-x-9' : 'translate-x-1'
+                  } inline-block h-6 w-6 transform rounded-full bg-white transition-transform`}
+                />
+              </button>
+              <span className={`text-lg font-medium ${isYearly ? 'text-blue-400' : 'text-gray-400'} w-20 text-left`}>
+                {isYearly ? 'Annually' : ''}
+              </span>
+            </div>
+            <p className="text-sm text-gray-400">
+              {isYearly ? 'Billed yearly (save 17%)' : 'Billed monthly'}
+            </p>
           </div>
         </div>
 

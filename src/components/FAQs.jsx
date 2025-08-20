@@ -26,7 +26,7 @@ const FAQs = () => {
 
   return (
     <div className="bg-black">
-      <Navbar/>
+      {/* <Navbar/> */}
       <div className="bg-black pt-40 pb-40 px-6 sm:px-8 md:px-12 lg:px-16">
         <div className="max-w-7xl mx-auto w-full">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">

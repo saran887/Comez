@@ -141,21 +141,24 @@ const FeatureSection = () => {
     <div className="py-12 md:py-20" style={{
       background: 'linear-gradient(180deg, #000000 0%, #030E22 50%, #000000 100%)'
     }}>
-      <div className="relative w-full text-center py-16">
-        <p 
-          className="font-outfit text-5xl font-normal leading-[75px] text-center mx-auto"
-          style={{
-            background: 'linear-gradient(88.72deg, #FFFFFF 0.7%, #B4B2B2 95.77%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            width: '503px',
-            height: '75px',
-            margin: '0 auto'
-          }}
-        >
-          Comez Feature Highlights
-        </p>
+      <div className="w-full py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 
+            className="font-outfit text-4xl md:text-5xl font-normal text-center"
+            style={{
+              background: 'linear-gradient(88.72deg, #FFFFFF 0.7%, #B4B2B2 95.77%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              lineHeight: '1.2',
+              margin: '0 auto',
+              maxWidth: '100%',
+              wordWrap: 'break-word'
+            }}
+          >
+            Comez Feature
+          </h2>
+        </div>
       </div>
     <div className="from-gray-900 to-gray-800 text-white py-5 px-4 md:px-16">
       {features.map((feature, index) => (
@@ -168,11 +171,11 @@ const FeatureSection = () => {
           {/* Text Content */}
           <div className="md:w-1/2 mb-8 md:mb-0">
             <div className="flex items-center mb-4">
-              <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center text-gray-900 mr-3">
+              <div className="mr-4">
                 <img 
                   src={feature.icon} 
                   alt="" 
-                  className="w-10 h-10"
+                  className={`${feature.title.includes('SEO') ? 'w-16 h-16' : 'w-12 h-12'}`}
                 />
               </div>
               <h2 
@@ -193,11 +196,11 @@ const FeatureSection = () => {
           </div>
 
           {/* Image */}
-          <div className="md:w-1/2 flex justify-center bg-">
+          <div className="w-full md:w-1/2 flex justify-center px-4 md:px-0">
             <img
               src={feature.image}
               alt={feature.title}
-              className="max-w-full h-auto"
+              className="w-3/4 md:w-full max-w-md h-auto transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>

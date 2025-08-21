@@ -52,15 +52,15 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="py-20 bg-black/30">
+    <div className="pt-20 pb-10 bg-black/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="mt-2 text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">Pricing</h2>
           
           <div className="mt-10 flex flex-col items-center justify-center space-y-2">
             <div className="flex items-center space-x-4">
-              <span className={`text-lg font-medium ${!isYearly ? 'text-blue-400' : 'text-gray-400'} w-20 text-right`}>
-                {!isYearly ? 'Monthly' : ''}
+              <span className={`text-lg font-medium ${!isYearly ? 'text-blue-400' : 'text-gray-500'} w-20 text-right`}>
+                Monthly
               </span>
               <button 
                 onClick={() => setIsYearly(!isYearly)}
@@ -72,12 +72,12 @@ const Pricing = () => {
                   } inline-block h-6 w-6 transform rounded-full bg-white transition-transform`}
                 />
               </button>
-              <span className={`text-lg font-medium ${isYearly ? 'text-blue-400' : 'text-gray-400'} w-20 text-left`}>
-                {isYearly ? 'Annually' : ''}
+              <span className={`text-lg font-medium ${isYearly ? 'text-blue-400' : 'text-gray-500'} w-20 text-left`}>
+                Annually
               </span>
             </div>
-            <p className="text-sm text-gray-400">
-              {isYearly ? 'Billed yearly (save 17%)' : 'Billed monthly'}
+            <p className="text-sm text-blue-400 font-medium">
+              {isYearly ? 'Save 17% with annual billing' : 'Flexible monthly billing'}
             </p>
           </div>
         </div>

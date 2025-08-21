@@ -3,6 +3,8 @@ import React from 'react';
 import { FaDollarSign, FaExclamationTriangle, FaCreditCard, FaCog } from "react-icons/fa";
 import Mobile1 from '../assets/mobile-screen 1.svg';
 import Mobile2 from '../assets/mobile-screen 2.svg';
+import Download from './Download';
+
 
 const features = [
   {
@@ -32,6 +34,7 @@ const About = () => {
     <section className="py-12 md:py-20" style={{
       background: 'linear-gradient(180deg, #000000 0%, #030E22 50%, #000000 100%)'
     }}>
+      <Download/>
       <div className="container mx-auto px-6 md:px-8 lg:px-12">
         <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-outfit mb-4 md:mb-6 text-white">

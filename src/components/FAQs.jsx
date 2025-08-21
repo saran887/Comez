@@ -27,13 +27,13 @@ const FAQs = () => {
   return (
     <div className="bg-black">
       {/* <Navbar/> */}
-      <div className="bg-black pt-20 pb-40 px-6 sm:px-8 md:px-12 lg:px-16">
+      <div className="bg-black pt-8 pb-20 sm:pt-16 sm:pb-32 md:pt-20 md:pb-40 px-4 sm:px-6 md:px-12 lg:px-16">
         <div className="max-w-7xl mx-auto w-full">
           <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12 ">
             FAQ's
           </h2>
           
-          <div className="space-y-8 w-full max-w-25xl mx-auto pt-20">
+          <div className="space-y-6 sm:space-y-8 w-full max-w-25xl mx-auto pt-8 sm:pt-12 md:pt-20">
             {faqs.map((faq, index) => (
               <div 
                 key={index} 
@@ -41,7 +41,7 @@ const FAQs = () => {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 sm:px-10 py-6 sm:py-8 text-left flex items-center justify-between focus:outline-none transition-colors duration-200"
+                  className="w-full px-4 sm:px-6 md:px-10 py-4 sm:py-6 md:py-8 text-left flex items-center justify-between focus:outline-none transition-colors duration-200"
                 >
                   <span className="text-white text-lg sm:text-xl font-semibold pr-4">{faq.question}</span>
                   <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-white/40 flex items-center justify-center hover:bg-white/10 transition-colors">

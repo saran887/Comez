@@ -156,7 +156,7 @@ const FeatureSection = () => {
               wordWrap: 'break-word'
             }}
           >
-            Comez Feature
+            Comez Feature Highlights
           </h2>
         </div>
       </div>
@@ -218,25 +218,24 @@ const FeatureSection = () => {
         {/* Text Content */}
         <div className="text-center md:text-left">
           <h2 
-            className="font-outfit text-4xl md:text-5xl font-normal mb-6"
+            className="font-outfit text-4xl md:text-5xl font-normal mb-6 leading-tight md:leading-normal"
             style={{
               background: 'linear-gradient(88.72deg, #FFFFFF 0.7%, #B4B2B2 95.77%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              lineHeight: '75px'
+              lineHeight: '1.2',
+              ...(window.innerWidth >= 768 && { lineHeight: '75px' })
             }}
           >
             Available on <em className="not-italic">All your Devices</em>
           </h2>
           <p 
-            className="text-[#C1C1C1] font-outfit text-xl leading-relaxed max-w-2xl"
+            className="text-[#C1C1C1] font-outfit text-lg md:text-2xl  leading-normal md:leading-relaxed max-w-2xl mx-auto md:mx-0 px-4 md:px-0 text-justify"
             style={{
               fontFamily: 'Outfit',
               fontStyle: 'normal',
-              fontWeight: 400,
-              lineHeight: '25px',
-              fontSize: '20px'
+              fontWeight: 400
             }}
           >
             The question lies upon your mind that the way we provide application at low cost. 

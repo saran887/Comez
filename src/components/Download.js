@@ -2,8 +2,10 @@ import React from 'react';
 import GooglePlayImage from '../assets/Google.png';
 import AppStoreImage from '../assets/Apple.png';
 
+
 const Download = () => {
   return (
+    
     <section className="relative py-16" style={{
       background: 'linear-gradient(180deg, #000000 0%, #030E22 50%, #000000 100%)'
     }}>

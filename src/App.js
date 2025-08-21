@@ -16,7 +16,7 @@ function App() {
            <Navbar /> 
           <div className="w-full overflow-x-hidden">
             <Hero />
-            <Download />
+            {/* <Download /> */}
             <div id="about" className="w-full overflow-hidden">
               <About />
               <div id="features">

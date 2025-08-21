@@ -179,7 +179,7 @@ const FeatureSection = () => {
                 />
               </div>
               <h2 
-                className="text-2xl font-outfit font-medium text-center"
+                className="text-2xl font-outfit font-medium text-start"
                 style={{
                   background: 'linear-gradient(88.72deg, #FFFFFF 0.7%, #B4B2B2 95.77%)',
                   WebkitBackgroundClip: 'text',
@@ -210,9 +210,9 @@ const FeatureSection = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Logos */}
         <div className="flex gap-8 mb-12 md:mb-0">
-          <img src={Android} alt="Android" className="w-30 h-30 object-contain" />
-          <img src={Apple} alt="Apple" className="w-30 h-30 object-contain" />
-          <img src={Cloud} alt="Cloud" className="w-30 h-30 object-contain" />
+          <img src={Android} alt="Android" className="w-20 h-20 object-contain" />
+          <img src={Apple} alt="Apple" className="w-12 h-13 object-contain" />
+          <img src={Cloud} alt="Cloud" className="w-20 h-20 object-contain" />
         </div>
 
         {/* Text Content */}
